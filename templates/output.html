@@ -16,7 +16,10 @@
 </head>
 <body>
     <div class="output">
-        {{dump}}
+
+        {% for line in dump %}
+          {{line}}<br>
+        {% endfor %}
 
     </div>
 
