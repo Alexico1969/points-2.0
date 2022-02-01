@@ -9,7 +9,13 @@ def get_dump():
         
     dump_output = []
 
+    dump_output.append('TABLE: users')
+    dump_output.append('============')
+
     for row in rows:
         dump_output.append(row)
+
+    dump_output.append('============')
+    dump_output.append('')
     
     return dump_output
