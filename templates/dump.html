@@ -4,38 +4,31 @@
     <meta charset="UTF-8">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Points - Data dump</title>
     <style>
+        *{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
         .output{
-            width: 100%;
+            width: 98%;
             height: 300px;
-            border: 1px black solid;
+            background-color: beige;
             margin-bottom: 10px;
+            padding: 10px;
         }
     </style>
 </head>
 <body>
     <div class="output">
-
+        <h2>Data:</h2>
         {% for line in dump %}
-          {{line}}<br>
+          >> {{line}}<br>
         {% endfor %}
 
     </div>
 
-    <form> 
-        <input type="text" placeholder="put input here"></input>
-        <button id="submit-btn" type="submit">Submit</button>
-    </form>
 
     <script>
-     
-        $('#submit-btn').click(sendData);
-
-        function sendData(event){
-            event.preventDefault();
-            alert("button clicked");
-        }
     </script>
 </body>
 </html>
