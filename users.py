@@ -11,9 +11,7 @@ def user_create(name, username, password, email, avatar):
     sql.execute(query, [name, username, password, email, avatar])
     connection.commit()
 
-def user_retrieve(user):
-    sql.execute('''select * from users
-                where username = ?''', [user])
+#RETRIEVE user
 
 
 #UPDATE user
@@ -30,5 +28,3 @@ def insert_test_data():
     user_create("Elly","ellen","123","el@aol.com","http://")
     user_create("codey12","cody","123","co@aol.com","http://")
     user_create("abber","abby","123","ab@aol.com","http://")
-
-   # MR. ALEX CAN YOU SEND NEW LINK FOR ZOOM MEET
