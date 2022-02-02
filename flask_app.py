@@ -6,7 +6,7 @@ from users import user_create, insert_test_data
 app=Flask(__name__)
 
 create_tables()
-#insert_test_data()
+insert_test_data()
 
 @app.route('/',methods=['GET','POST'])
 def home():
