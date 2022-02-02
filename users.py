@@ -22,9 +22,9 @@ def user_create(name, username, password, email, avatar):
 
 #CREATE TEST DATA
 def insert_test_data():
-    user_create("Skippy","skipster","123","sk@aol.com","http://")
-    user_create("Charley","charles","123","ch@aol.com","http://")
-    user_create("Princess","pinky","123","pi@aol.com","http://")
-    user_create("Elly","ellen","123","el@aol.com","http://")
+    #user_create("Skippy","skipster","123","sk@aol.com","http://")
+    #user_create("Charley","charles","123","ch@aol.com","http://")
+    #user_create("Princess","pinky","123","pi@aol.com","http://")
+    #user_create("Elly","ellen","123","el@aol.com","http://")
     user_create("codey12","cody","123","co@aol.com","http://")
     user_create("abber","abby","123","ab@aol.com","http://")
