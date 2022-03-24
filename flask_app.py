@@ -1,12 +1,12 @@
 from flask import Flask,redirect,url_for,render_template,request
 from dump import get_dump
 from db import connection, sql, create_tables
-from users import user_create, insert_test_data
+from users import add_user, create_test_data
 
 app=Flask(__name__)
 
 create_tables()
-insert_test_data()
+#create_test_data()
 
 @app.route('/',methods=['GET','POST'])
 def home():

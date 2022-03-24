@@ -12,6 +12,7 @@ def create_tables():
         username text,
         password text,
         email text,
+        role int,
         avatar text
     );
 
@@ -24,17 +25,14 @@ def create_tables():
     query = '''
 
     Create table if not exists chores(
-        Speak tamil for a day text,
-        Fold clothes,
-        Fold clothes,
-        Fold bed,
-        Chess
-
-
+        chore_id integer primary key autoincrement,
+        name text,
+        description text,
+        points text
     );
 
 
     '''
 
-    #sql.execute(query)
+    sql.execute(query)
     

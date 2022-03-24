@@ -2,14 +2,17 @@ from db import connection, sql
 
 
 #CREATE user
-def user_create(name, username, password, email, avatar):
+def add_user(name, username, password, email, role, avatar):
+    if not name: return "No data received in add_user()"
+    
+    query = '''
 
-    query='''
-    INSERT into users (name, username, password, email, avatar) 
-    VALUES (?,?,?,?,?);
+    insert into users (name, username, password, email, role, avatar) values (?,?,?,?,?,?);
     '''
-    sql.execute(query, [name, username, password, email, avatar])
+
+    sql.execute(query, [name, username, password, email, role, avatar])
     connection.commit()
+    return "User has been added"
 
 #RETRIEVE user
 
@@ -21,10 +24,8 @@ def user_create(name, username, password, email, avatar):
 
 
 #CREATE TEST DATA
-def insert_test_data():
-    #user_create("Skippy","skipster","123","sk@aol.com","http://")
-    #user_create("Charley","charles","123","ch@aol.com","http://")
-    #user_create("Princess","pinky","123","pi@aol.com","http://")
-    #user_create("Elly","ellen","123","el@aol.com","http://")
-    user_create("codey12","cody","123","co@aol.com","http://")
-    user_create("abber","abby","123","ab@aol.com","http://")
+
+def create_test_data():
+    add_user("Wilhelm Singh","wsing1","12345678","wsing1@gmail.com","guest","https://cdn.pixabay.com/photo/2015/03/04/22/35/head-659652_1280.png")
+    add_user("Nicole Singh","nsing1","12345678","nsing1@gmail.com","guest","https://cdn4.iconfinder.com/data/icons/ibrandify-female-user-action-icon/512/19-512.png")
+    return
